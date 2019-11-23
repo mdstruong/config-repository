@@ -3,6 +3,15 @@ spring:
     url: jdbc:mysql://localhost/ecom
     username: root
     password: kimberly
+    driver-class-name: com.mysql.jdbc.Driver
+    validation-query: SELECT 1;
+    initial-size: 2
+    sql-script-encoding: UTF-8
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    show-sql: true
+    hibernate.ddl-auto=update
+
 eureka:
   client:
     serviceUrl:
